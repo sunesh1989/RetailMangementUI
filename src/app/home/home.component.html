@@ -1,0 +1,15 @@
+<div style="margin-top:11px;">
+    <table id="customers">
+        <tr>
+          <th>SL No</th>
+          <th>Product Name</th>
+          <th></th>
+        </tr>
+        <tr *ngFor="let prod of products; let i = index" [attr.data-index]="i">
+          <td>{{i+1}}</td>
+          <td>{{prod.name}}</td>
+          <td><a routerLink="../product-info" [queryParams]={id:prod.id}><span class="backbtn" routerLink="/">View</span> </a></td>
+        </tr>
+      
+      </table>
+</div>
